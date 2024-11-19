@@ -1,47 +1,46 @@
-## Support Vector Machines (SVM)
+## Key Techniques for Exploratory Data Analysis (EDA)
 
-**Support Vector Machines (SVM)** is a powerful supervised machine learning algorithm used for both classification and regression tasks. The core idea of SVM is to find the optimal hyperplane that separates data points into different classes.
+**EDA** is a crucial step in any data science project. It helps you understand the data, identify patterns, anomalies, and potential issues. Here are some key techniques and tools:
 
-**How SVM Works:**
+### **1. Univariate Analysis**
+* **Numerical Data:**
+    - **Histograms:** Visualize the distribution of numerical variables.
+    - **Box Plots:** Identify outliers, quartiles, and median.
+    - **Descriptive Statistics:** Calculate measures like mean, median, mode, standard deviation, and quartiles.
+* **Categorical Data:**
+    - **Frequency Tables:** Count the occurrences of each category.
+    - **Bar Charts:** Visualize the distribution of categorical variables.
 
-1. **Margin Maximization:** SVM aims to find the hyperplane that maximizes the margin between the two classes. The margin is the distance between the hyperplane and the closest data points from each class.
-2. **Support Vectors:** The data points closest to the hyperplane are called support vectors. These points play a crucial role in determining the position of the hyperplane.
-3. **Kernel Trick:** SVM can handle non-linearly separable data by mapping the data into a higher-dimensional space using kernel functions (e.g., linear, polynomial, radial basis function (RBF)).
+### **2. Bivariate Analysis**
+* **Numerical-Numerical:**
+    - **Scatter Plots:** Visualize the relationship between two numerical variables.
+    - **Correlation Matrix:** Quantify the linear relationship between numerical variables.
+* **Numerical-Categorical:**
+    - **Box Plots:** Compare the distribution of a numerical variable across different categories.
+    - **Bar Plots:** Visualize the average or median of a numerical variable for each category.
+* **Categorical-Categorical:**
+    - **Contingency Tables:** Tabulate the frequency of occurrences of different categories.
+    - **Heatmaps:** Visualize the contingency table as a heatmap.
 
-**Key Concepts:**
+### **3. Multivariate Analysis**
+* **Pair Plots:** Visualize pairwise relationships between multiple numerical variables.
+* **Correlation Matrix:** Visualize the correlation between all numerical variables.
+* **Principal Component Analysis (PCA):** Reduce the dimensionality of high-dimensional data.
+* **Clustering:** Group similar data points together.
 
-* **Hyperplane:** A decision boundary that separates data points into different classes.
-* **Margin:** The distance between the hyperplane and the closest data points.
-* **Kernel Trick:** A technique to map data into a higher-dimensional space to make it linearly separable.
+### **Tools and Libraries:**
 
-**Python Implementation:**
+* **Python:**
+  - **Pandas:** For data manipulation and analysis.
+  - **NumPy:** For numerical computations.
+  - **Matplotlib:** For creating static, animated, and interactive visualizations.
+  - **Seaborn:** A high-level data visualization library built on Matplotlib.
+  - **Scikit-learn:** For machine learning tasks, including data preprocessing and modeling.
 
-```python
-from sklearn.svm import SVC
+* **R:**
+  - **dplyr:** For data manipulation.
+  - **ggplot2:** For creating elegant and informative visualizations.
 
-# Assuming X_train, y_train, X_test, and y_test are your training and testing data
-clf = SVC(kernel='linear')  # Linear kernel for linearly separable data
-# clf = SVC(kernel='rbf')  # RBF kernel for non-linearly separable data
-clf.fit(X_train, y_train)
-y_pred = clf.predict(X_test)
-```
-
-**Advantages:**
-
-* Effective in high-dimensional spaces.
-* Robust to overfitting.
-* Can handle both linear and non-linear data.
-
-**Disadvantages:**
-
-* Can be computationally expensive for large datasets.
-* Sensitive to the choice of kernel and hyperparameters.
-
-**Applications:**
-
-* **Image Classification:** Classifying images into different categories.
-* **Text Classification:** Categorizing text documents.
-* **Bioinformatics:** Predicting protein structures and gene functions.
-* **Financial Modeling:** Credit scoring and fraud detection.
-
-By understanding the principles of SVM, you can effectively apply it to a wide range of classification and regression tasks.
+By effectively using these techniques and tools, you can gain valuable insights from your data and make informed decisions.
+ 
+**Remember to clean and preprocess your data before performing EDA. This includes handling missing values, outliers, and inconsistencies.**
